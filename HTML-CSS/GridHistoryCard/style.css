@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Cantata One", serif;
+}
+
+body{
+    background-color: rgb(245, 245, 220);
+    height: 100vh;
+    display: grid;
+    place-items: center center;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 20px;
+    gap: 40px;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: rgb(255, 219, 164);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.299);
+    padding: 10px;
+}
+
+.container{
+    position: relative;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.details{
+    padding-left: 10px;
+}
+
+.details h3{
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.card:hover{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.452);
+    transition: 0.7s ease;
+}
+
+@media(max-width:1250px){
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    img{
+        position: relative;
+        padding-bottom: 10px;
+        object-fit: cover;
+    }
+    .card{
+        grid-template-columns: 250px;
+        grid-template-rows: 18rem;
+        height: 100%;
+    }
+
+    .details h3{
+        text-align: center;
+    }
+
+}
